@@ -22,4 +22,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: gen6-mods-exl
-          path: gen6-mods-exl.3gx
+          path: default.3gx
