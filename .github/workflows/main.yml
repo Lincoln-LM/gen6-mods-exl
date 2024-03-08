@@ -1,0 +1,25 @@
+name: Build
+
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    # TODO: consider a different container
+    container: zaksabeast/devkitarm-rust
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: make
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: gen6-mods-exl
+          path: gen6-mods-exl.3gx

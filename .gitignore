@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# 3ds
+*.3gx
+
+# build
+build
+
+# vscode
+.vscode
